@@ -1,4 +1,29 @@
-# 🏥 Hospital SQL Database
+<h1 align="center">🏥 Hospital SQL Database</h1><br>
+<table align="center">
+	<tr>
+		<th>
+			Directory
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<a href="https://github.com/ethangutknecht/Hospital-SQL-Database#-about-the-class">🎓  About The Class</a><br><br>
+			<a href="https://github.com/ethangutknecht/Hospital-SQL-Database#%E2%84%B9-about-the-project">ℹ About The Project</a><br><br>
+			<a href="https://github.com/ethangutknecht/Hospital-SQL-Database#-the-steps-to-this-project">📃 The Steps To This Project</a>
+			<ul>
+				<li><a href="https://github.com/ethangutknecht/Hospital-SQL-Database#-understanding-how-the-hospital-functions">🚑 Understanding How The "Hospital" Functions</a></li>
+				<li><a href="https://github.com/ethangutknecht/Hospital-SQL-Database#-creating-a-baseline-entity-relationship-diagram-erd">🗺 Creating a Baseline Entity-Relationship Diagram </a></li>
+				<li><a href="https://github.com/ethangutknecht/Hospital-SQL-Database#-making-the-erd-well-formed">✨ Making the ERD Well-Formed</a></li>
+				<li><a href="https://github.com/ethangutknecht/Hospital-SQL-Database#-turning-the-erd-into-relational-form">💽 Turning The ERD Into Relational Form</a></li>
+				<li><a href="https://github.com/ethangutknecht/Hospital-SQL-Database#-using-google-cloud-platform">☁ Using Google Cloud Platform</a></li>
+			</ul>
+			<a href="https://github.com/ethangutknecht/Hospital-SQL-Database#-the-final-database">💽 The Final Database </a><br><br>
+			<a href="https://github.com/ethangutknecht/Hospital-SQL-Database#-what-i-wouldve-done-differently">✏ What I Would've Done Differently</a><br><br>
+		</td>
+  	</tr>
+</table><br>
+
+
 ## 🎓 About The Class
 #### CSE385 - Database Systems
 I took this during my junior year of college in the fall of 2021. This class explored all of the ideas that created a well-formed database. First, we dabbled and explored ideas in Database Management Systems and what makes one better than another. Next, we applied database architecture and modeling knowledge, creating entity relationship diagrams (ERD) as the first topics we learned. Following up on this topic, we practiced making relational models of our database from our ERD and making them in the highest normal form possible. These topics that I learned are in this final classes project, which was designing a database in a consultant-client scenario.
@@ -180,7 +205,7 @@ There is a simple formula to turn entity-relationship form into relational form.
 </ul>
 </td></tr>
 <tr><td>
-	<b>Prescribed(doctor_ID, patient_ID, medication_name</b><br>
+	<b>Prescribed(doctor_ID, patient_ID, medication_name)</b><br>
 <ul>
 <li>doctor_ID is a FK to Doctor</li>
 <li>patient_ID is a FK to Patient</li>
@@ -192,8 +217,8 @@ There is a simple formula to turn entity-relationship form into relational form.
 <br><br>
 
 
-### ☁ Using Google Cloud Platform and Creating SQL Statements
-Unfortunately, I do not have access to the original Google Cloud Platform account with which I used to implement this database. Furthermore, I am writing this after I took the class, and thus the premium features expired. Nevertheless, I have the SQL queries used within google to create the tables in the schema. If you have a service provider that allows you to host databases using SQL, you can input the SQL queries below for yourself. I know AWS and google are great providers, but Microsoft and Meta have services that will do the job.
+### ☁ Using Google Cloud Platform
+Unfortunately, I do not have access to the original Google Cloud Platform account I used to implement this database. Furthermore, I am writing this after I took the class, and thus the premium features expired. Nevertheless, I have the SQL queries used within google to create the tables in the schema. If you have a service provider that allows you to host databases using SQL, you can input the SQL queries below for yourself. I know AWS and google are great providers, but Microsoft and Meta have services that will do the job.
 
 <p align="center">
   <img src="https://github.com/ethangutknecht/Hospital-SQL-Database/blob/main/Project%20Files/GoogleCloudScreenshot.png?raw=true">
@@ -357,12 +382,12 @@ person_ID int NOT NULL,
 receptionist_ID int NOT NULL,
 startTime varchar(255) NOT NULL,
 endTime varchar(255) NOT NULL,
-date Date NOT NULL,
+sdate Date NOT NULL,
 PRIMARY KEY (person_ID, receptionist_ID, startTime, endTime, date),
 FOREIGN KEY (person_ID) REFERENCES Person(person_ID),
 FOREIGN KEY (startTime) REFERENCES Shift(startTime),
 FOREIGN KEY (endTime) REFERENCES Shift(endTime),
-FOREIGN KEY (date) REFERENCES Shift(date),
+FOREIGN KEY (sdate) REFERENCES Shift(sdate),
 FOREIGN KEY (receptionist_ID) REFERENCES Receptionist(receptionist_ID)
 );
 
@@ -384,7 +409,7 @@ FOREIGN KEY (medication_name) REFERENCES Medication(name)
 ## ✏ What I Would've Done Differently
 I added this section because I thought it was important. When we did this project, it was before we learned about how to store data extremely efficiently. For example, much of my data has redundancies. If you look at the admitted table, I store the entire shift table over and over because the date, start time, and end time is the entire primary key. If I would’ve made a “shift_ID” attribute for the Shift table, it would’ve avoided using all of that excess data.<br><br>
 
-If I were to do this project over with the knowledge I have now, I would get the tables into the highest normal form. I would remove excess data that is stored across tables. Furthermore, I would check for insertion and deletion anomalies among my tables. There is so much more that I could do to this schema to make it more efficient with the knowledge I have now, but since this project was so early in the semester, I couldn’t do so, unfortunately.
+If I were to do this project with the knowledge I have now, I would get the tables into the highest normal form. I would remove excess data stored across tables. Furthermore, I would check for insertion and deletion anomalies among my tables. There is so much more that I could do to this schema to make it more efficient with the knowledge I have now, but since this project was so early in the semester, I couldn’t do so, unfortunately.
 
 
 <br><br><br>
