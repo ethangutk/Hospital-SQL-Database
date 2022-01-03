@@ -194,7 +194,14 @@ There is a simple formula to turn entity-relationship form into relational form.
 
 ### ☁ Using Google Cloud Platform and Creating SQL Statements
 Unfortunately, I do not have access to the original Google Cloud Platform account with which I used to implement this database. Furthermore, I am writing this after I took the class, and thus the premium features expired. Nevertheless, I have the SQL queries used within google to create the tables in the schema. If you have a service provider that allows you to host databases using SQL, you can input the SQL queries below for yourself. I know AWS and google are great providers, but Microsoft and Meta have services that will do the job.
-<br><br>
+
+<p align="center">
+  <img src="https://github.com/ethangutknecht/Hospital-SQL-Database/blob/main/Project%20Files/GoogleCloudScreenshot.png?raw=true">
+</p><br>
+
+
+
+<br><br><br><br>
 
 
 - - - -
