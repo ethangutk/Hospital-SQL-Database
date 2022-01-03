@@ -29,7 +29,7 @@ One of the initial tasks of the project was to understand how this hypothetical 
 ### 🗺 Creating a Baseline Entity-Relationship Diagram (ERD)
 An Entity-Relationship Diagram (ERD), also known as an Entity-Relationship model (ERM), is an efficient way to map a database visually. It allows us to see what is stored within a database and how each entity relates and interacts. It is a truly remarkable first step to creating an efficient database. We first created an ERD based on the description from the hospital, even if some of the stuff didn’t make sense. Below is the first baseline ERD that I made. It is much easier to make a draft of the ERD and refine it rather than refine it as you go.
 <p align="center">
-  <img src="?raw=true">
+  <img src="https://github.com/ethangutknecht/Hospital-SQL-Database/blob/main/Project%20Files/Baseline_ERD.png?raw=true">
 </p>
 <br><br>
 
@@ -37,7 +37,7 @@ An Entity-Relationship Diagram (ERD), also known as an Entity-Relationship model
 ### ✨ Making the ERD Well-Formed
 To make an ERD well-formed is almost like a puzzle. First, you have to look for things to fix and make sure the overall diagram makes sense. Next, I had to fix some of the redundancies, primary keys for objects, some objects needed to relate to other entities, and a few smaller items. Overall, this was my final well-formed ERD.
 <p align="center">
-  <img src="?raw=true">
+  <img src="https://github.com/ethangutknecht/Hospital-SQL-Database/blob/main/Project%20Files/WellFormed_ERD.png?raw=true">
 </p><br>
 Along with making an ERD well-formed, you sometimes have to assume stuff relating to your ERD to make sense. In a real-world example, you would take these assumptions to the “Hospital” and make sure they are correct or fix them if they are not. Some of these assumptions include cardinality, weak entities, and relationships. Below are my assumptions for my well-formed ERD above. <br>
 
@@ -106,7 +106,7 @@ There is a simple formula to turn entity-relationship form into relational form.
 <tbody>
 <tr><th align="center">Tables And Their Foreign Keys Within The “Hospital” Schema</th></tr> 
 <tr><td>
-	<b>Address(number, street, state, city, person_ID)</b><br>
+	<b>Address(<u>number, street, state, city,</u> person_ID)</b><br>
 <ul>
 <li>person_ID is a FK to Person</li>
 </ul>
@@ -193,6 +193,7 @@ There is a simple formula to turn entity-relationship form into relational form.
 
 
 ### ☁ Using Google Cloud Platform and Creating SQL Statements
+Unfortunately, I do not have access to the original Google Cloud Platform account with which I used to implement this database. Furthermore, I am writing this after I took the class, and thus the premium features expired. Nevertheless, I have the SQL queries used within google to create the tables in the schema. If you have a service provider that allows you to host databases using SQL, you can input the SQL queries below for yourself. I know AWS and google are great providers, but Microsoft and Meta have services that will do the job.
 <br><br>
 
 
@@ -211,12 +212,172 @@ There is a simple formula to turn entity-relationship form into relational form.
 
 <br><br><br><br>
 
-## 💽 The Final Database
+## 💽 The Final Database (SQL Queries)
 
-<p align="center">
-  <img src="?raw=true">
-</p>
-<br>
+```sql
+----------------------------------------
+-- Copyright Ethan Gutknecht (C) 2022 --
+----------------------------------------
+
+-- Creates the Person table
+CREATE TABLE Person (
+phoneNumber varchar(255),
+email varchar(255),
+person_ID int NOT NULL,
+PRIMARY KEY (person_ID)
+);
+
+
+-- Creates the Address table
+CREATE TABLE Address (
+number int NOT NULL,
+street varchar(255) NOT NULL,
+state varchar(255) NOT NULL,
+city varchar(255) NOT NULL,
+persID int NOT NULL,
+PRIMARY KEY (number, street, state, city),
+FOREIGN KEY (persID) REFERENCES Person(person_ID)
+);
+
+
+-- Create the Shift table
+CREATE TABLE Shift (
+startTime varchar(255) NOT NULL,
+endTime varchar(255) NOT NULL,
+sdate Date NOT NULL,
+PRIMARY KEY (startTime, endTime, sdate)
+);
+
+
+-- Create the Receptionist table
+CREATE TABLE Receptionist (
+receptionist_ID int NOT NULL,
+person_ID int NOT NULL,
+PRIMARY KEY (receptionist_ID),
+FOREIGN KEY (person_ID) REFERENCES Person(person_ID)
+);
+
+
+-- Create the Doctor table
+CREATE TABLE Doctor(
+doctor_ID int NOT NULL,
+person_ID int NOT NULL,
+PRIMARY KEY (doctor_ID),
+FOREIGN KEY (person_ID) REFERENCES Person(person_ID)
+);
+
+
+-- Create the TriageDoctor table
+CREATE TABLE TriageDoctor(
+tdoctor_ID int NOT NULL,
+doctor_ID int NOT NULL,
+PRIMARY KEY (tdoctor_ID),
+FOREIGN KEY (doctor_ID) REFERENCES Doctor(doctor_ID)
+);
+
+
+-- Create the Nurse table
+CREATE TABLE Nurse(
+nurse_ID int NOT NULL,
+person_ID int NOT NULL,
+PRIMARY KEY (nurse_ID),
+FOREIGN KEY (person_ID) REFERENCES Person(person_ID)
+);
+
+
+-- Create the Bed table
+CREATE TABLE Bed(
+bed_ID int NOT NULL,
+nurse_ID int NOT NULL,
+PRIMARY KEY (bed_ID),
+FOREIGN KEY (nurse_ID) REFERENCES Nurse(nurse_ID)
+);
+
+
+-- Create the Patient table
+CREATE TABLE Patient(
+patient_ID int NOT NULL,
+bed_ID int NOT NULL,
+person_ID int NOT NULL,
+outcomeOfVisit varchar(255),
+PRIMARY KEY (patient_ID),
+FOREIGN KEY (person_ID) REFERENCES Person(person_ID),
+FOREIGN KEY (bed_ID) REFERENCES Bed(bed_ID)
+);
+
+
+-- Create the Medication table
+CREATE TABLE Medication(
+name varchar(255) NOT NULL,
+PRIMARY KEY (name)
+);
+
+
+-- Create the Assigned table
+CREATE TABLE Assigned(
+person_ID int NOT NULL,
+startTime varchar(255) NOT NULL,
+endTime varchar(255) NOT NULL,
+sdate Date NOT NULL,
+PRIMARY KEY (person_ID, startTime, endTime, sdate),
+FOREIGN KEY (startTime) REFERENCES Shift(startTime),
+FOREIGN KEY (endTime) REFERENCES Shift(endTime),
+FOREIGN KEY (sdate) REFERENCES Shift(sdate)
+);
+
+
+-- Create the Administered table
+CREATE TABLE Administered(
+medication_name varchar(255) NOT NULL,
+nurse_ID int NOT NULL, 
+timesPerDay int, 
+dosage varchar(255), 
+timeAdministered varchar(255),
+PRIMARY KEY (medication_name),
+FOREIGN KEY (nurse_ID) REFERENCES Nurse(nurse_ID),
+FOREIGN KEY (medication_name) REFERENCES Medication(name)
+);
+
+
+-- Create the Prescribed table
+CREATE TABLE Admitted(
+admit_date Date,
+admit_time varchar(255),
+discharge_date Date,
+discharge_time varchar(255),
+primaryDiagnosis varchar(255),
+person_ID int NOT NULL,
+receptionist_ID int NOT NULL,
+startTime varchar(255) NOT NULL,
+endTime varchar(255) NOT NULL,
+date Date NOT NULL,
+PRIMARY KEY (person_ID, receptionist_ID, startTime, endTime, date),
+FOREIGN KEY (person_ID) REFERENCES Person(person_ID),
+FOREIGN KEY (startTime) REFERENCES Shift(startTime),
+FOREIGN KEY (endTime) REFERENCES Shift(endTime),
+FOREIGN KEY (date) REFERENCES Shift(date),
+FOREIGN KEY (receptionist_ID) REFERENCES Receptionist(receptionist_ID)
+);
+
+CREATE TABLE Prescribed(
+doctor_ID int NOT NULL,
+patient_ID int NOT NULL,
+medication_name varchar(255) NOT NULL,
+PRIMARY KEY (doctor_ID, patient_ID, medication_name),
+FOREIGN KEY (doctor_ID) REFERENCES Doctor(doctor_ID),
+FOREIGN KEY (patient_ID) REFERENCES Patient(patient_ID),
+FOREIGN KEY (medication_name) REFERENCES Medication(name)
+);
+
+
+```
+
+<br><br><br>
+
+## ✏ What I Would've Done Differently
+I added this section because I thought it was important. When we did this project, it was before we learned about how to store data extremely efficiently. For example, much of my data has redundancies. If you look at the admitted table, I store the entire shift table over and over because the date, start time, and end time is the entire primary key. If I would’ve made a “shift_ID” attribute for the Shift table, it would’ve avoided using all of that excess data.<br><br>
+
+If I were to do this project over with the knowledge I have now, I would get the tables into the highest normal form. I would remove excess data that is stored across tables. Furthermore, I would check for insertion and deletion anomalies among my tables. There is so much more that I could do to this schema to make it more efficient with the knowledge I have now, but since this project was so early in the semester, I couldn’t do so, unfortunately.
 
 
 <br><br><br>
