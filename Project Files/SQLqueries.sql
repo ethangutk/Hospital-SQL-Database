@@ -123,7 +123,7 @@ FOREIGN KEY (medication_name) REFERENCES Medication(name)
 );
 
 
--- Create the Prescribed table
+-- Create the Admitted table
 CREATE TABLE Admitted(
 admit_date Date,
 admit_time varchar(255),
@@ -143,6 +143,8 @@ FOREIGN KEY (date) REFERENCES Shift(date),
 FOREIGN KEY (receptionist_ID) REFERENCES Receptionist(receptionist_ID)
 );
 
+
+-- Create the Prescribed table
 CREATE TABLE Prescribed(
 doctor_ID int NOT NULL,
 patient_ID int NOT NULL,
