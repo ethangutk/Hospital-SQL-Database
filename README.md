@@ -17,7 +17,7 @@
 				<li><a href="https://github.com/ethangutknecht/Hospital-SQL-Database#-turning-the-erd-into-relational-form">💽 Turning The ERD Into Relational Form</a></li>
 				<li><a href="https://github.com/ethangutknecht/Hospital-SQL-Database#-using-google-cloud-platform">☁ Using Google Cloud Platform</a></li>
 			</ul>
-			<a href="https://github.com/ethangutknecht/Hospital-SQL-Database#-the-final-database">💽 The Final Database </a><br><br>
+			<a href="https://github.com/ethangutknecht/Hospital-SQL-Database#-the-final-database-sql-queries">💽 The Final Database </a><br><br>
 			<a href="https://github.com/ethangutknecht/Hospital-SQL-Database#-what-i-wouldve-done-differently">✏ What I Would've Done Differently</a><br><br>
 		</td>
   	</tr>
