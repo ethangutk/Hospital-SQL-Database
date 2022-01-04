@@ -412,10 +412,25 @@ I added this section because I thought it was important. When we did this projec
 If I were to do this project with the knowledge I have now, I would get the tables into the highest normal form. I would remove excess data stored across tables. Furthermore, I would check for insertion and deletion anomalies among my tables. There is so much more that I could do to this schema to make it more efficient with the knowledge I have now, but since this project was so early in the semester, I couldn’t do so, unfortunately.
 
 
-<br><br><br>
+
+<br><br>
+
+- - - -
+<p align="center">
+	<a align="center" href="https://github.com/ethangutknecht/Hospital-SQL-Database#-hospital-sql-database">⬆ Back To The Top </a>
+</p>
+
+- - - -
+
+<p align="center">
+	<a href="https://github.com/ethangutknecht">↩ Back To Ethan Gutknecht's Profile</a>
+</p>
 
 - - - -
 
 <p align="center">
   Copyright © Ethan Gutknecht 2021
 </p>
+
+
+
