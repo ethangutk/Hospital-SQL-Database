@@ -435,5 +435,8 @@ This class scratched the surface of what databases are and could be in practice.
 - - - -
 
 <h6 align="center">
-  Copyright © Ethan Gutknecht 2021
+  Copyright © Ethan Gutknecht 2022
 </h6>
+
+
+
