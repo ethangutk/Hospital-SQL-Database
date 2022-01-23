@@ -1,3 +1,7 @@
+<h6 >
+	<a href="https://github.com/ethangutknecht">↩ Back To Ethan Gutknecht's Profile</a>
+</h6>
+
 <h1 align="center">🏥 Hospital SQL Database</h1><br>
 <table align="center">
 	<tr>
@@ -36,7 +40,7 @@ This final project’s design is to simulate a customer-consultant project. When
 <br><br><br>
 ## 📃 The Steps To This Project
 ### 🚑 Understanding How The "Hospital" Functions
-One of the initial tasks of the project was to understand how this hypothetical hospital operates. We had to know how everything worked to store the essential data. To do this, this “hospital” gave us a description (listed below) of how they stored files of patients and more. As I read this repeatedly, I would write down objects they mentioned and their descriptions, sometimes highlighting stuff on the page in different colors. For example, green for action words, like “put away” or “prescribe,” blue for objects, like “medicine” and “patients,” and yellow for descriptions, like “dosage” or “hours.” Highlighting these things allowed me to have an excellent understanding of creating an entity-relationship diagram.
+One of the initial tasks of the project was to understand how this hypothetical hospital operates. We had to know how everything worked to store the essential data. To do this, this “hospital” gave us a description (listed below) of how they kept files of patients and more. As I read this repeatedly, I would write down objects they mentioned and their descriptions, sometimes highlighting stuff on the page in different colors. For example, green for action words, like “put away” or “prescribe,” blue for objects, like “medicine” and “patients,” and yellow for descriptions, like “dosage” or “hours.” Highlighting these things allowed me to have an excellent understanding of creating an entity-relationship diagram.
 
 | General Description
 | :---:
@@ -409,28 +413,27 @@ FOREIGN KEY (medication_name) REFERENCES Medication(name)
 ## ✏ What I Would've Done Differently
 I added this section because I thought it was important. When we did this project, it was before we learned about how to store data extremely efficiently. For example, much of my data has redundancies. If you look at the admitted table, I store the entire shift table over and over because the date, start time, and end time is the entire primary key. If I would’ve made a “shift_ID” attribute for the Shift table, it would’ve avoided using all of that excess data.<br><br>
 
-If I were to do this project with the knowledge I have now, I would get the tables into the highest normal form. I would remove excess data stored across tables. Furthermore, I would check for insertion and deletion anomalies among my tables. There is so much more that I could do to this schema to make it more efficient with the knowledge I have now, but since this project was so early in the semester, I couldn’t do so, unfortunately.
+If I were to do this project with my current knowledge, I would get the tables into the highest normal form. Then, I would remove excess data stored across tables. Finally, I would check for insertion and deletion anomalies among my tables. There is so much more that I could do to this schema to make it more efficient with the knowledge I have now, but since this project was so early in the semester, I couldn’t do so, unfortunately.<br><br>
+
+This class scratched the surface of what databases are and could be in practice. I still have a lot to learn about them, but this was an incredible experience to dive headfirst into using them.
 
 
 
 <br><br>
 
 - - - -
-<p align="center">
+<h6 align="center">
 	<a align="center" href="https://github.com/ethangutknecht/Hospital-SQL-Database#-hospital-sql-database">⬆ Back To The Top </a>
-</p>
+</h6>
 
 - - - -
 
-<p align="center">
+<h6 align="center">
 	<a href="https://github.com/ethangutknecht">↩ Back To Ethan Gutknecht's Profile</a>
-</p>
+</h6>
 
 - - - -
 
-<p align="center">
+<h6 align="center">
   Copyright © Ethan Gutknecht 2021
-</p>
-
-
-
+</h6>
