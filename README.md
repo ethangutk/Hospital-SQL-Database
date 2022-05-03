@@ -30,7 +30,7 @@
 
 ## 🎓 About The Class
 #### CSE385 - Database Systems
-I took this during my junior year of college in the fall of 2021. This class explored all of the ideas that created a well-formed database. First, we dabbled and explored ideas in Database Management Systems and what makes one better than another. Next, we applied database architecture and modeling knowledge, creating entity relationship diagrams (ERD) as the first topics we learned. Following up on this topic, we practiced making relational models of our database from our ERD and making them in the highest normal form possible. These topics that I learned are in this final classes project, which was designing a database in a consultant-client scenario.
+I took this during my junior year of college in the fall of 2021. This class explored all of the ideas that created a well-formed database. First, we dabbled and explored ideas in Database Management Systems and what makes one better than another. Next, we applied database architecture and modeling knowledge, creating entity relationship diagrams (ERD) as the first topics we learned. Following up on this topic, we practiced making relational models of our database from our ERD and making them in the highest normal form possible. These topics that I learned are in this final class project, which was designing a database in a consultant-client scenario.
 
 
 <br><br><br>
@@ -40,7 +40,7 @@ This final project’s design is to simulate a customer-consultant project. When
 <br><br><br>
 ## 📃 The Steps To This Project
 ### 🚑 Understanding How The "Hospital" Functions
-One of the initial tasks of the project was to understand how this hypothetical hospital operates. We had to know how everything worked to store the essential data. To do this, this “hospital” gave us a description (listed below) of how they kept files of patients and more. As I read this repeatedly, I would write down objects they mentioned and their descriptions, sometimes highlighting stuff on the page in different colors. For example, green for action words, like “put away” or “prescribe,” blue for objects, like “medicine” and “patients,” and yellow for descriptions, like “dosage” or “hours.” Highlighting these things allowed me to have an excellent understanding of creating an entity-relationship diagram.
+One of the initial tasks of the project was to understand how this hypothetical hospital operates. We had to know how everything worked to store the essential data. This “hospital” gave us a description (listed below) of how they kept files of patients and more. As I read this repeatedly, I would write down objects they mentioned and their descriptions, sometimes highlighting stuff on the page in different colors. For example, green for action words, like “put away” or “prescribe,” blue for objects, like “medicine” and “patients,” and yellow for descriptions, like “dosage” or “hours.” Highlighting these things allowed me to have an excellent understanding of creating an entity-relationship diagram.
 
 | General Description
 | :---:
@@ -64,7 +64,7 @@ An Entity-Relationship Diagram (ERD), also known as an Entity-Relationship model
 
 
 ### ✨ Making the ERD Well-Formed
-To make an ERD well-formed is almost like a puzzle. First, you have to look for things to fix and make sure the overall diagram makes sense. Next, I had to fix some of the redundancies, primary keys for objects, some objects needed to relate to other entities, and a few smaller items. Overall, this was my final well-formed ERD.
+To make an ERD well-formed is almost like a puzzle. First, you have to look for things to fix and make sure the overall diagram makes sense. Next, I had to fix some of the redundancies, primary keys for objects, objects that needed to relate to other entities, and a few smaller items. Overall, this was my final well-formed ERD.
 <p align="center">
   <img src="https://github.com/ethangutknecht/Hospital-SQL-Database/blob/main/Project%20Files/WellFormed_ERD.png?raw=true">
 </p><br>
@@ -222,7 +222,7 @@ There is a simple formula to turn entity-relationship form into relational form.
 
 
 ### ☁ Using Google Cloud Platform
-Unfortunately, I do not have access to the original Google Cloud Platform account I used to implement this database. Furthermore, I am writing this after I took the class, and thus the premium features expired. Nevertheless, I have the SQL queries used within google to create the tables in the schema. If you have a service provider that allows you to host databases using SQL, you can input the SQL queries below for yourself. I know AWS and google are great providers, but Microsoft and Meta have services that will do the job.
+Unfortunately, I do not have access to the original Google Cloud Platform account I used to implement this database. Furthermore, I am writing this after I took the class, and thus the premium features expired. Nevertheless, I have the SQL queries used within google to create the tables in the schema. If you have a service provider that allows you to host databases using SQL, you can input the SQL queries below. I know AWS and google are great providers, but Microsoft and Meta have services that will do the job.
 
 <p align="center">
   <img src="https://github.com/ethangutknecht/Hospital-SQL-Database/blob/main/Project%20Files/GoogleCloudScreenshot.png?raw=true">
@@ -411,7 +411,7 @@ FOREIGN KEY (medication_name) REFERENCES Medication(name)
 <br><br><br>
 
 ## ✏ What I Would've Done Differently
-I added this section because I thought it was important. When we did this project, it was before we learned about how to store data extremely efficiently. For example, much of my data has redundancies. If you look at the admitted table, I store the entire shift table over and over because the date, start time, and end time is the entire primary key. If I would’ve made a “shift_ID” attribute for the Shift table, it would’ve avoided using all of that excess data.<br><br>
+I added this section because I thought it was important. When we did this project, it was before we learned about how to store data extremely efficiently. For example, much of my data has redundancies. If you look at the admitted table, I store the entire shift table repeatedly because the date, start time, and end time is the primary key. If I would’ve made a “shift_ID” attribute for the Shift table, it would’ve avoided using all of that excess data.<br><br>
 
 If I were to do this project with my current knowledge, I would get the tables into the highest normal form. Then, I would remove excess data stored across tables. Finally, I would check for insertion and deletion anomalies among my tables. There is so much more that I could do to this schema to make it more efficient with the knowledge I have now, but since this project was so early in the semester, I couldn’t do so, unfortunately.<br><br>
 
