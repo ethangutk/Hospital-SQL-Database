@@ -11,18 +11,18 @@
 	</tr>
 	<tr>
 		<td>
-			<a href="https://github.com/ethangutknecht/Hospital-SQL-Database#-about-the-class">🎓  About The Class</a><br><br>
-			<a href="https://github.com/ethangutknecht/Hospital-SQL-Database#%E2%84%B9-about-the-project">ℹ About The Project</a><br><br>
-			<a href="https://github.com/ethangutknecht/Hospital-SQL-Database#-the-steps-to-this-project">📃 The Steps To This Project</a>
+			<a href="#-about-the-class">🎓  About The Class</a><br><br>
+			<a href="#%E2%84%B9-about-the-project">ℹ About The Project</a><br><br>
+			<a href="#-the-steps-to-this-project">📃 The Steps To This Project</a>
 			<ul>
-				<li><a href="https://github.com/ethangutknecht/Hospital-SQL-Database#-understanding-how-the-hospital-functions">🚑 Understanding How The "Hospital" Functions</a></li>
-				<li><a href="https://github.com/ethangutknecht/Hospital-SQL-Database#-creating-a-baseline-entity-relationship-diagram-erd">🗺 Creating a Baseline Entity-Relationship Diagram </a></li>
-				<li><a href="https://github.com/ethangutknecht/Hospital-SQL-Database#-making-the-erd-well-formed">✨ Making the ERD Well-Formed</a></li>
-				<li><a href="https://github.com/ethangutknecht/Hospital-SQL-Database#-turning-the-erd-into-relational-form">💽 Turning The ERD Into Relational Form</a></li>
-				<li><a href="https://github.com/ethangutknecht/Hospital-SQL-Database#-using-google-cloud-platform">☁ Using Google Cloud Platform</a></li>
+				<li><a href="#-understanding-how-the-hospital-functions">🚑 Understanding How The "Hospital" Functions</a></li>
+				<li><a href="#-creating-a-baseline-entity-relationship-diagram-erd">🗺 Creating a Baseline Entity-Relationship Diagram </a></li>
+				<li><a href="#-making-the-erd-well-formed">✨ Making the ERD Well-Formed</a></li>
+				<li><a href="#-turning-the-erd-into-relational-form">💽 Turning The ERD Into Relational Form</a></li>
+				<li><a href="#-using-google-cloud-platform">☁ Using Google Cloud Platform</a></li>
 			</ul>
-			<a href="https://github.com/ethangutknecht/Hospital-SQL-Database#-the-final-database-sql-queries">💽 The Final Database </a><br><br>
-			<a href="https://github.com/ethangutknecht/Hospital-SQL-Database#-what-i-wouldve-done-differently">✏ What I Would've Done Differently</a><br><br>
+			<a href="#-the-final-database-sql-queries">💽 The Final Database </a><br><br>
+			<a href="#-what-i-wouldve-done-differently">✏ What I Would've Done Differently</a><br><br>
 		</td>
   	</tr>
 </table><br>
@@ -423,7 +423,7 @@ This class scratched the surface of what databases are and could be in practice.
 
 - - - -
 <h6 align="center">
-	<a align="center" href="https://github.com/ethangutknecht/Hospital-SQL-Database#-hospital-sql-database">⬆ Back To The Top </a>
+	<a align="center" href="#-hospital-sql-database">⬆ Back To The Top </a>
 </h6>
 
 - - - -
@@ -437,6 +437,4 @@ This class scratched the surface of what databases are and could be in practice.
 <h6 align="center">
   Copyright © Ethan Gutknecht 2022
 </h6>
-
-
 
