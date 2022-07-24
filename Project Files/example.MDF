@@ -1,0 +1,1 @@
+-- Created this file to have GitHub show that this is an SQL project
