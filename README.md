@@ -130,7 +130,7 @@ Along with making an ERD well-formed, you sometimes have to assume stuff relatin
 
 
 ### 💽 Turning The ERD Into Relational Form
-There is a simple formula to turn entity-relationship form into relational form. This step is needed to start creating a schema that a user can interact with. Or in other words, we are taking a diagram and turning it into something that can be imputed into a computer. We turn every entity to its own table in the schema most of the time. Here is a link to the full translation guide of transforming the ERD to a relational form. We got this relational form after applying the translation to our own well-formed ERD.<br>
+There is a simple formula to turn entity-relationship form into relational form. This step is needed to create a schema with which a user can interact. Or in other words, we are taking a diagram and turning it into something that can be imputed into a computer. Most of the time, we turn every entity to its own table in the schema. Here is a link to the full translation guide for transforming the ERD to a relational form. We got this relational form after applying the translation to our own well-formed ERD.<br>
 <table> 
 <tbody>
 <tr><th align="center">Tables And Their Foreign Keys Within The “Hospital” Schema</th></tr> 
@@ -222,7 +222,7 @@ There is a simple formula to turn entity-relationship form into relational form.
 
 
 ### ☁ Using Google Cloud Platform
-Unfortunately, I do not have access to the original Google Cloud Platform account I used to implement this database. Furthermore, I am writing this after taking the class, and thus the premium features expired. Nevertheless, I have the SQL queries used within google to create the tables in the schema. You can input the SQL queries below if you have a service provider that allows you to host databases using SQL. I know AWS and google are great providers, but Microsoft and Meta have services that will do the job.
+Unfortunately, I do not have access to the original Google Cloud Platform account I used to implement this database. Furthermore, I am writing this after taking the class; thus, the premium features expired. Nevertheless, I have the SQL queries used within google to create the tables in the schema. You can input the SQL queries below if you have a service provider that allows you to host databases using SQL. I know AWS and google are great providers, but Microsoft and Meta have services that will do the job.
 
 <p align="center">
   <img src="https://github.com/ethangutknecht/Hospital-SQL-Database/blob/main/Project%20Files/GoogleCloudScreenshot.png?raw=true">
