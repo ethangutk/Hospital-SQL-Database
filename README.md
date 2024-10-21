@@ -1,5 +1,5 @@
 <h6 >
-	<a href="https://github.com/ethangutknecht">↩ Back To Ethan Gutknecht's Profile</a>
+	<a href="https://github.com/ethangtkt">↩ Back To ethangtkt's Profile</a>
 </h6>
 
 <h1 align="center">🏥 Hospital SQL Database</h1><br>
@@ -58,7 +58,7 @@ One of the initial tasks of the project was to understand how this hypothetical 
 ### 🗺 Creating a Baseline Entity-Relationship Diagram (ERD)
 An Entity-Relationship Diagram (ERD), also known as an Entity-Relationship model (ERM), is an efficient way to map a database visually. It allows us to see what is stored within a database and how each entity relates and interacts. It is a truly remarkable first step to creating an efficient database. We first created an ERD based on the description from the hospital, even if some of the stuff didn’t make sense. Below is the first baseline ERD that I made. It is much easier to make a draft of the ERD and refine it rather than refine it as you go.
 <p align="center">
-  <img src="https://github.com/ethangutknecht/Hospital-SQL-Database/blob/main/Project%20Files/Baseline_ERD.png?raw=true">
+  <img src="https://github.com/ethangtkt/Hospital-SQL-Database/blob/main/Project%20Files/Baseline_ERD.png?raw=true">
 </p>
 <br><br>
 
@@ -66,7 +66,7 @@ An Entity-Relationship Diagram (ERD), also known as an Entity-Relationship model
 ### ✨ Making the ERD Well-Formed
 To make an ERD well-formed is almost like a puzzle. First, you must look for things to fix and ensure the overall diagram makes sense. Next, I had to fix some redundancies, primary keys for objects, objects that needed to relate to other entities, and a few smaller items. Overall, this was my final well-formed ERD.
 <p align="center">
-  <img src="https://github.com/ethangutknecht/Hospital-SQL-Database/blob/main/Project%20Files/WellFormed_ERD.png?raw=true">
+  <img src="https://github.com/ethangtkt/Hospital-SQL-Database/blob/main/Project%20Files/WellFormed_ERD.png?raw=true">
 </p><br>
 Along with making an ERD well-formed, you sometimes have to assume stuff relating to your ERD to make sense. In a real-world example, you would take these assumptions to the “Hospital” and ensure they are correct or fix them if they are not. Some of these assumptions include cardinality, weak entities, and relationships. Below are my assumptions for my well-formed ERD above. <br>
 
@@ -225,7 +225,7 @@ There is a simple formula to turn entity-relationship form into relational form.
 Unfortunately, I do not have access to the original Google Cloud Platform account I used to implement this database. Furthermore, I am writing this after taking the class; thus, the premium features expired. Nevertheless, I have the SQL queries used within google to create the tables in the schema. You can input the SQL queries below if you have a service provider that allows you to host databases using SQL. I know AWS and google are great providers, but Microsoft and Meta have services that will do the job.
 
 <p align="center">
-  <img src="https://github.com/ethangutknecht/Hospital-SQL-Database/blob/main/Project%20Files/GoogleCloudScreenshot.png?raw=true">
+  <img src="https://github.com/ethangtkt/Hospital-SQL-Database/blob/main/Project%20Files/GoogleCloudScreenshot.png?raw=true">
 </p><br>
 
 
@@ -252,7 +252,7 @@ Unfortunately, I do not have access to the original Google Cloud Platform accoun
 
 ```sql
 ----------------------------------------
--- Copyright Ethan Gutknecht (C) 2022 --
+-- Copyright ethangtkt (C) 2022 --
 ----------------------------------------
 
 -- Creates the Person table
@@ -423,19 +423,19 @@ This class scratched what databases are and could be in practice. I still have a
 
 - - - -
 <h6 align="center">
-	<a align="center" href="#-back-to-ethan-gutknechts-profile">⬆ Back To The Top </a>
+	<a align="center" href="#-back-to-ethangtkts-profile">⬆ Back To The Top </a>
 </h6>
 
 - - - -
 
 <h6 align="center">
-	<a href="https://github.com/ethangutknecht">↩ Back To Ethan Gutknecht's Profile</a>
+	<a href="https://github.com/ethangtkt">↩ Back To ethangtkt's Profile</a>
 </h6>
 
 - - - -
 
 <h6 align="center">
-  Copyright © Ethan Gutknecht 2022
+  Copyright © ethangtkt 2022
 </h6>
 
 
